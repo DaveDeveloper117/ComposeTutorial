@@ -1,6 +1,7 @@
 package com.davedevab.composetutorial.ui.home
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,21 +10,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.CardElevation
-import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.Card
 import androidx.compose.material3.Text
-import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.compose.rememberImagePainter
+import coil.compose.rememberAsyncImagePainter
 import com.davedevab.composetutorial.domain.item.GameItem
 
 @Composable
@@ -42,12 +43,13 @@ fun HomeScreen(){
 
 @Composable
 fun GameCard(game: GameItem){
-    val image = rememberImagePainter(data = game.thumbnail)
+    val image = rememberAsyncImagePainter(model = game.thumbnail)
+    var isExpanded by remember { mutableStateOf(false) }
 
-    ElevatedCard(
+    Card(
         shape =  RoundedCornerShape(8.dp),
         modifier = Modifier
-            .padding(all = 10.dp)
+            .padding(10.dp)
             .fillMaxSize()
     ) {
         Column {
@@ -59,11 +61,19 @@ fun GameCard(game: GameItem){
                     .fillMaxWidth()
                     .height(250.dp)
             )
-            Column(modifier = Modifier.padding(all = 5.dp)) {
+            Column(modifier = Modifier.padding(5.dp)) {
                 Text(text = game.title, fontWeight = FontWeight.Bold)
-                Text(text = game.short_description, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(
+                    text = game.short_description,
+                    maxLines = if (isExpanded) Int.MAX_VALUE else 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier
+                        .clickable {
+                            isExpanded = !isExpanded
+                        }
+                )
             }
         }
     }
-
 }
+
