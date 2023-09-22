@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FreeGames</string>
+    <string name="title_activity_minimalist_card">MinimalistCard</string>
 </resources>

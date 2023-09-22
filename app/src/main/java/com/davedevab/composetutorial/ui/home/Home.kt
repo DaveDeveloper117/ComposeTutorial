@@ -1,5 +1,9 @@
 package com.davedevab.composetutorial.ui.home
 
+import android.content.Intent
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -10,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -45,9 +50,12 @@ fun HomeScreen(){
 fun GameCard(game: GameItem){
     val image = rememberAsyncImagePainter(model = game.thumbnail)
     var isExpanded by remember { mutableStateOf(false) }
+    val openUrl = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        // Aquí puedes manejar la respuesta si es necesario, pero en este caso, no es necesario.
+    }
 
     Card(
-        shape =  RoundedCornerShape(8.dp),
+        shape =  RoundedCornerShape(16.dp),
         modifier = Modifier
             .padding(10.dp)
             .fillMaxSize()
@@ -61,7 +69,7 @@ fun GameCard(game: GameItem){
                     .fillMaxWidth()
                     .height(250.dp)
             )
-            Column(modifier = Modifier.padding(5.dp)) {
+            Column(modifier = Modifier.padding(8.dp)) {
                 Text(text = game.title, fontWeight = FontWeight.Bold)
                 Text(
                     text = game.short_description,
@@ -72,6 +80,17 @@ fun GameCard(game: GameItem){
                             isExpanded = !isExpanded
                         }
                 )
+                Button(
+                    onClick = {
+                        // Acción para el primer botón
+                        val url = game.game_url // Supongamos que el modelo proporciona la URL
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                        openUrl.launch(intent)
+                    },
+                    modifier = Modifier.padding(6.dp)
+                ) {
+                    Text(text = "View Site Game")
+                }
             }
         }
     }
