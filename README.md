@@ -86,7 +86,8 @@ Asegúrate de mantener actualizadas las versiones de estas dependencias según l
 1. Clona o descarga el repositorio en tu máquina local:
 
    ```shell
-   git clone https://github.com/DaveDeveloper117/ComposeTutorial.git` 
+   git clone https://github.com/DaveDeveloper117/ComposeTutorial.git
+   ``` 
 
 2.  Abre el proyecto en Android Studio.
     
