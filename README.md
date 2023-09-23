@@ -28,7 +28,7 @@ Durante el desarrollo de este proyecto, se han adquirido conocimientos y habilid
 -   **Manejo de ViewModels:** Se ha trabajado con ViewModels para separar la lógica de presentación de la lógica de negocio, lo que facilita la escalabilidad y la prueba de la aplicación.
 -   **Trabajo con Coroutines:** Se han aplicado Coroutines para manejar operaciones asincrónicas de manera eficiente y segura en Android.
 
-## Información de la API
+## Información de la API 🌐
 **API Utilizada**
 | Nombre         | Descripción                                                                      | API Url                         |
 |----------------|----------------------------------------------------------------------------------|---------------------------------|
@@ -43,6 +43,43 @@ Durante el desarrollo de este proyecto, se han adquirido conocimientos y habilid
 ## Capturas de Pantalla 🖼️
 
 <img src="assets/home.png" alt="home" width="200"> 
+
+## Requisitos del Sistema 📔
+
+Para ejecutar la aplicación ComposeTutorial en un dispositivo Android, debes cumplir con los siguientes requisitos del sistema:
+
+-   Dispositivo Android con sistema operativo Android 5.0 (Lollipop) o superior.
+-   Conexión a Internet para cargar datos de juegos desde la API.
+-   Se recomienda un dispositivo con al menos 2 GB de RAM para un rendimiento óptimo.
+
+### **Dependencias Gradle**
+
+A continuación, se muestra una lista de las dependencias Gradle utilizadas en el proyecto FreeGames. Puedes agregar estas dependencias en tu archivo `build.gradle` para configurar el entorno de desarrollo y las bibliotecas necesarias:
+
+
+
+```kotlin
+dependencies {
+    // Jetpack Compose
+    implementation("androidx.compose.ui:ui:1.5.1")
+    implementation("androidx.compose.material3:material:1.1.2")
+    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    
+    // Retrofit y GSON para solicitudes HTTP
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    
+    // Dagger Hilt para inyección de dependencias
+    implementation("com.google.dagger:hilt-android:2.48.0")
+    kapt("com.google.dagger:hilt-android-compiler:2.48.0")
+    
+    // Coil para cargar imágenes
+    implementation("io.coil-kt:coil-compose:2.4.0")
+}
+``` 
+
+Asegúrate de mantener actualizadas las versiones de estas dependencias según las últimas versiones disponibles en el momento de desarrollo. Además, es importante configurar Dagger Hilt y las anotaciones de inyección de dependencias correctamente en tu proyecto para que la inyección de dependencias funcione correctamente.
 
 ## Instalación y Uso 📥
 
