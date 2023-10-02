@@ -1,5 +1,13 @@
 package com.davedevab.composetutorial.ui.home
 
+/*
+ * Name: FreeGames
+ * Dev: David Butrón
+ * Profile Github: https://github.com/DaveDeveloper117/
+ * License: https://github.com/DaveDeveloper117/ComposeTutorial/blob/master/LICENSE
+ * Github Repo: https://github.com/DaveDeveloper117/ComposeTutorial
+ */
+
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -57,7 +65,6 @@ fun GameCard(game: GameItem){
     val image = rememberAsyncImagePainter(model = game.thumbnail)
     var isExpanded by remember { mutableStateOf(false) }
     val openUrl = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        // Aquí puedes manejar la respuesta si es necesario, pero en este caso, no es necesario.
     }
 
     Card(

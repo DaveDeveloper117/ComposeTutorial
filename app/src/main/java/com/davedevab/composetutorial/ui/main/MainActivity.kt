@@ -1,5 +1,13 @@
 package com.davedevab.composetutorial.ui.main
 
+/*
+ * Name: FreeGames
+ * Dev: David Butrón
+ * Profile Github: https://github.com/DaveDeveloper117/
+ * License: https://github.com/DaveDeveloper117/ComposeTutorial/blob/master/LICENSE
+ * Github Repo: https://github.com/DaveDeveloper117/ComposeTutorial
+ */
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

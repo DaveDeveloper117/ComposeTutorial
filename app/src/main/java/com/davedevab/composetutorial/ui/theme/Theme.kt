@@ -1,11 +1,18 @@
 package com.davedevab.composetutorial.ui.theme
 
+/*
+ * Name: FreeGames
+ * Dev: David Butrón
+ * Profile Github: https://github.com/DaveDeveloper117/
+ * License: https://github.com/DaveDeveloper117/ComposeTutorial/blob/master/LICENSE
+ * Github Repo: https://github.com/DaveDeveloper117/ComposeTutorial
+ */
+
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
-
 
 private val LightColors = lightColorScheme(
     primary = md_theme_light_primary,

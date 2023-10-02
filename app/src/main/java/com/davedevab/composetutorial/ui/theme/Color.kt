@@ -1,6 +1,14 @@
 package com.davedevab.composetutorial.ui.theme
 import androidx.compose.ui.graphics.Color
 
+/*
+ * Name: FreeGames
+ * Dev: David Butrón
+ * Profile Github: https://github.com/DaveDeveloper117/
+ * License: https://github.com/DaveDeveloper117/ComposeTutorial/blob/master/LICENSE
+ * Github Repo: https://github.com/DaveDeveloper117/ComposeTutorial
+ */
+
 val md_theme_light_primary = Color(0xFF9A4059)
 val md_theme_light_onPrimary = Color(0xFFFFFFFF)
 val md_theme_light_primaryContainer = Color(0xFFFFD9DF)
