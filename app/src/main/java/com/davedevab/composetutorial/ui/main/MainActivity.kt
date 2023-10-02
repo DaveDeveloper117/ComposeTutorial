@@ -7,12 +7,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.davedevab.composetutorial.ComposeTutorialTheme
+import com.davedevab.composetutorial.ui.theme.ComposeTutorialTheme
 import com.davedevab.composetutorial.ui.home.HomeScreen
-import com.davedevab.composetutorial.ui.home.HomeViewModel
 
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
