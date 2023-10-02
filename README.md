@@ -39,10 +39,27 @@ Durante el desarrollo de este proyecto, se han adquirido conocimientos y habilid
 |--------|----------|----------------------------------------|
 | GET    | /games | Obtiene una lista de juegos gratuitos. |
 
+## Paleta de Colores 🎨
+
+La paleta de colores de la aplicación ha sido diseñada con el Material 3 Design Theme Builder de Android. Aquí están los colores clave utilizados en la aplicación:
+
+<div align="center"> <img src="assets/theme_builder.png" alt="home" width="1024"> </div>
+
+-   **Primary:** #b5838d
+    
+-   **Secondary:** #e5989b
+    
+-   **Tertiary:** #ffb4a2
+    
+-   **Neutral:** #988e8f
+    
+
+Puedes explorar y personalizar aún más esta paleta utilizando el [Material 3 Design Theme Builder](https://m3.material.io/theme-builder#/custom).
+
 
 ## Capturas de Pantalla 🖼️
 
-<img src="assets/home.png" alt="home" width="200"> 
+<img src="assets/home_light.png" alt="home" width="200"> <img src="assets/home_dark.png" alt="home" width="200"> 
 
 ## Requisitos del Sistema 📔
 
