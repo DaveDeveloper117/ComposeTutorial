@@ -45,13 +45,13 @@ La paleta de colores de la aplicación ha sido diseñada con el Material 3 Desig
 
 <div align="center"> <img src="assets/theme_builder.png" alt="home" width="1024"> </div>
 
--   **Primary:** #b5838d
+- <img align="center" height="30" width="30" src="assets/primary.svg"/> **Primary:** `#b5838d`
     
--   **Secondary:** #e5989b
+- <img align="center" height="30" width="30" src="assets/secondary.svg"/> **Secondary:** `#e5989b`
     
--   **Tertiary:** #ffb4a2
+- <img align="center" height="30" width="30" src="assets/tertiary.svg"/> **Tertiary:** `#ffb4a2`
     
--   **Neutral:** #988e8f
+- <img align="center" height="30" width="30" src="assets/neutral.svg"/> **Neutral:** `#988e8f`
     
 
 Puedes explorar y personalizar aún más esta paleta utilizando el [Material 3 Design Theme Builder](https://m3.material.io/theme-builder#/custom).
@@ -75,7 +75,7 @@ A continuación, se muestra una lista de las dependencias Gradle utilizadas en e
 
 
 
-```kotlin
+```gradle
 dependencies {
     // Jetpack Compose
     implementation("androidx.compose.ui:ui:1.5.1")
